@@ -1,0 +1,100 @@
+﻿@page
+@model DataBoundForm.Pages.Author.CreateAuthorModel
+@{
+
+}
+<h1>Author Data </h1>
+<style>
+    input[type=text], select {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+
+    input[type=submit] {
+        width: 100%;
+        background-color: #4CAF50;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+        input[type=submit]:hover {
+            background-color: #45a049;
+        }
+
+    div {
+        border-radius: 5px;
+        background-color: #f2f2f2;
+        padding: 20px;
+    }
+    
+    
+</style>
+
+<form method="post">
+
+    <div style="">
+        <label asp-for="Author.Given_name"> Given Name *</label>
+        <input asp-for="Author.Given_name" />
+        <span asp-validation-for="Author.Given_name"></span>
+    </div>
+    <div>
+        <label asp-for="Author.Last_name">Last Name (Surname) *</label>
+        <input asp-for="Author.Last_name" />
+        <span asp-validation-for="Author.Last_name"></span>
+    </div>
+    <div>
+        <label asp-for="Author.Birth_date">Date of Birth</label>
+        <input asp-for="Author.Birth_date" />
+        <span asp-validation-for="Author.Birth_date"></span>
+    </div>
+    <div>
+        <label asp-for="Author.Email">Email Address</label>
+        <input asp-for="Author.Email" />
+        <span asp-validation-for="Author.Email"></span>
+    </div>
+    <div>
+        <label asp-for="Author.Website">Website</label>
+        <input asp-for="Author.Website" />
+        <span asp-validation-for="Author.Website"></span>
+    </div>
+    <div>
+        <label asp-for="Author.Phone">Phone</label>
+        <input asp-for="Author.Phone" />
+        <span asp-validation-for="Author.Phone"></span>
+    </div>
+    <div>
+        <label asp-for="Author.Country">Country</label>
+        <input asp-for="Author.Country" />
+        <span asp-validation-for="Author.Country"></span>
+    </div>
+    <div>
+        <label asp-for="Author.Province">Province</label>
+        <input asp-for="Author.Province" />
+        <span asp-validation-for="Author.Province"></span>
+    </div>
+    <div>
+        <label asp-for="Author.Postal_code">Postal Code</label>
+        <input asp-for="Author.Postal_code" />
+        <span asp-validation-for="Author.Postal_code"></span>
+    </div>
+
+
+    <input type="submit" value="Submit" />
+</form>
+<div asp-validation-summary="All"></div>
+
+@section Scripts
+{
+    <script src="~/lib/jquery-validation/dist/additional-methods.min.js"></script>
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+}
