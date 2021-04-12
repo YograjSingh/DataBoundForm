@@ -1,0 +1,75 @@
+﻿@page
+@model DataBoundForm.Pages.Admin.Author.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>AuthorModel</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="AuthorModel.Given_name" class="control-label">Given Name</label>
+                <input asp-for="AuthorModel.Given_name" class="form-control" />
+                <span asp-validation-for="AuthorModel.Given_name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AuthorModel.Last_name" class="control-label">Last Name</label>
+                <input asp-for="AuthorModel.Last_name" class="form-control" />
+                <span asp-validation-for="AuthorModel.Last_name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AuthorModel.Birth_date" class="control-label">Birth Date</label>
+                <input asp-for="AuthorModel.Birth_date" class="form-control" />
+                <span asp-validation-for="AuthorModel.Birth_date" class="text-danger"></span>
+            </div>
+                <input type="hidden" asp-for="AuthorModel.Email" />
+            <div class="form-group">
+                <label asp-for="AuthorModel.Email" class="control-label"></label>
+                <input asp-for="AuthorModel.Email" class="form-control" />
+                <span asp-validation-for="AuthorModel.Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AuthorModel.Website" class="control-label"></label>
+                <input asp-for="AuthorModel.Website" class="form-control" />
+                <span asp-validation-for="AuthorModel.Website" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AuthorModel.Phone" class="control-label"></label>
+                <input asp-for="AuthorModel.Phone" class="form-control" />
+                <span asp-validation-for="AuthorModel.Phone" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AuthorModel.Country" class="control-label"></label>
+                <input asp-for="AuthorModel.Country" class="form-control" />
+                <span asp-validation-for="AuthorModel.Country" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AuthorModel.Province" class="control-label"></label>
+                <input asp-for="AuthorModel.Province" class="form-control" />
+                <span asp-validation-for="AuthorModel.Province" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AuthorModel.Postal_code" class="control-label"></label>
+                <input asp-for="AuthorModel.Postal_code" class="form-control" />
+                <span asp-validation-for="AuthorModel.Postal_code" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
