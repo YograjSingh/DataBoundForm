@@ -1,0 +1,87 @@
+﻿@page
+@model DataBoundForm.Pages.Admin.Author.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+<style>
+    th,td {
+    border: 1px solid;
+    }
+</style>
+<h1 style="text-align:center; font-family:serif;">Authors</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table" >
+    <thead>
+        <tr>
+            <th>
+@*                @Html.DisplayNameFor(model => model.AuthorModel[0].Given_name)*@
+                Given Name
+            </th>
+            <th>
+               @* @Html.DisplayNameFor(model => model.AuthorModel[0].Last_name)*@
+                Last Name
+            </th>
+            <th>
+               @* @Html.DisplayNameFor(model => model.AuthorModel[0].Birth_date)*@
+                Date Of Birth
+            </th>
+            <th>
+                @*@Html.DisplayNameFor(model => model.AuthorModel[0].Email)*@
+                E-Mail
+            </th>
+            
+            <th>
+                @*@Html.DisplayNameFor(model => model.AuthorModel[0].Phone)*@
+                Phone
+            </th>
+            <th>
+                @*@Html.DisplayNameFor(model => model.AuthorModel[0].Country)*@
+                Country
+            </th>
+           
+            <th>
+@*                @Html.DisplayNameFor(model => model.AuthorModel[0].Postal_code)*@
+                Postal Code
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.AuthorModel) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Given_name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Last_name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Birth_date)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            
+            <td>
+                @Html.DisplayFor(modelItem => item.Phone)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Country)
+            </td>
+            
+            <td>
+                @Html.DisplayFor(modelItem => item.Postal_code)
+            </td>
+            <td>
+                <a type="button" class="btn btn-primary" asp-page="./Edit" asp-route-id="@item.Email">Edit</a>
+                <a type="button" class="btn btn-secondary" asp-page="./Details" asp-route-id="@item.Email">Details</a>
+                <a type="button" class="btn btn-danger" asp-page="./Delete" asp-route-id="@item.Email">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

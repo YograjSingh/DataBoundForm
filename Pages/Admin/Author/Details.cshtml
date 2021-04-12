@@ -1,0 +1,67 @@
+﻿@page
+@model DataBoundForm.Pages.Admin.Author.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>AuthorModel</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.AuthorModel.Given_name)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.AuthorModel.Given_name)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.AuthorModel.Last_name)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.AuthorModel.Last_name)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.AuthorModel.Birth_date)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.AuthorModel.Birth_date)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.AuthorModel.Website)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.AuthorModel.Website)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.AuthorModel.Phone)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.AuthorModel.Phone)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.AuthorModel.Country)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.AuthorModel.Country)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.AuthorModel.Province)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.AuthorModel.Province)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.AuthorModel.Postal_code)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.AuthorModel.Postal_code)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.AuthorModel.Email">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>
